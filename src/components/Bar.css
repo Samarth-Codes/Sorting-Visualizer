@@ -1,28 +1,32 @@
 .bar {
-	border-radius: 5px 5px 0 0;
-	width: 25px;
-	margin: 10px;
-	margin-right: 10px;
+    border-radius: 5px 5px 0 0;
+    width: 25px;
+    margin: 10px;
+    margin-right: 10px;
+    background-color: darkcyan; /* Ensure bars have a visible background */
+    z-index: 1; /* Position them above other elements */
+    position: relative; /* Allows stacking control with z-index */
 }
 
 .text {
-	position: relative;
-	border: none;
-	background: transparent;
-	text-align: center;
-	transform: rotate(-90deg);
-	outline: none;
+    position: relative;
+    border: none;
+    background: transparent;
+    text-align: center;
+    transform: rotate(-90deg);
+    outline: none;
+    z-index: 2; /* Ensure text remains visible above bars */
 }
 
 .quantity-btn {
     position: relative;
     text-align: center;
-	cursor: pointer;
+    cursor: pointer;
     background: darkcyan;
     margin: 1px;
 }
 
-.quantity-btn::hover {
+.quantity-btn:hover {
     opacity: 0.5;
 }
 
@@ -34,4 +38,10 @@ input[type='number']::-webkit-outer-spin-button {
 
 input[type='number'] {
     -moz-appearance: textfield;
+}
+
+/* Ensure parent container does not hide overflow */
+.parent-container {
+    overflow: visible; /* Ensure bars are not clipped */
+    position: relative; /* Keeps elements properly aligned */
 }
