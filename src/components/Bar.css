@@ -3,9 +3,9 @@
     width: 25px;
     margin: 10px;
     margin-right: 10px;
-    background-color: darkcyan; /* Ensure bars have a visible background */
-    z-index: 1; /* Position them above other elements */
-    position: relative; /* Allows stacking control with z-index */
+    background-color: darkcyan; 
+    z-index: 1; 
+    position: relative; 
 }
 
 .text {
@@ -15,7 +15,7 @@
     text-align: center;
     transform: rotate(-90deg);
     outline: none;
-    z-index: 2; /* Ensure text remains visible above bars */
+    z-index: 2; 
 }
 
 .quantity-btn {
@@ -40,8 +40,7 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 
-/* Ensure parent container does not hide overflow */
 .parent-container {
-    overflow: visible; /* Ensure bars are not clipped */
-    position: relative; /* Keeps elements properly aligned */
+    overflow: visible; 
+    position: relative; 
 }
